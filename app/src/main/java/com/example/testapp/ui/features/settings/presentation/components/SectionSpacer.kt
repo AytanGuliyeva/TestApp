@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,7 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SectionSpacer(modifier: Modifier = Modifier){
-    Box (modifier = modifier.height(48.dp)
-        .background(MaterialTheme .colors.onSurface.copy(alpha = 0.12f))){  }
+fun SectionSpacer(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .height(48.dp)
+            .background(MaterialTheme.colors.onSurface.copy(alpha = 0.12f))
+    ) { }
 }

@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.presentation.items
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -16,6 +16,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
+import com.example.testapp.ui.features.settings.domain.model.Theme
+import com.example.testapp.ui.features.settings.presentation.components.SettingItem
 
 @Composable
 fun ThemeSettingItem(
@@ -26,12 +28,15 @@ fun ThemeSettingItem(
 
     var expanded by remember { mutableStateOf(false) }
 
-    SettingItem (modifier = modifier){
-        Row (modifier = Modifier
-            .clickable (onClick = {expanded = !expanded},
-                onClickLabel = stringResource(id = R.string.cd_select_theme)
-            )
-            .padding(16.dp)){
+    SettingItem(modifier = modifier) {
+        Row(
+            modifier = Modifier
+                .clickable(
+                    onClick = { expanded = !expanded },
+                    onClickLabel = stringResource(id = R.string.cd_select_theme)
+                )
+                .padding(16.dp)
+        ) {
             Text(
                 modifier = Modifier.weight(1f),
                 text = stringResource(id = R.string.setting_option_theme)
@@ -39,10 +44,10 @@ fun ThemeSettingItem(
             Text(
                 text = stringResource(id = selectedTheme.label)
             )
-            DropdownMenu (
+            DropdownMenu(
                 expanded = expanded,
-                onDismissRequest = {expanded = false},
-                offset = DpOffset(16.dp,0.dp)
+                onDismissRequest = { expanded = false },
+                offset = DpOffset(16.dp, 0.dp)
             ) {
                 Theme.values().forEach { theme ->
                     DropdownMenuItem(
@@ -50,7 +55,7 @@ fun ThemeSettingItem(
                             onOptionSelected(theme)
                             expanded = false
                         }
-                    ){
+                    ) {
                         Text(text = stringResource(id = theme.label))
                     }
                 }

@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.presentation.items
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -14,6 +14,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
+import com.example.testapp.ui.features.settings.presentation.components.SettingItem
 
 @Composable
 fun HintSettingsItem(
@@ -38,7 +39,8 @@ fun HintSettingsItem(
                 .toggleable(
                     value = checked,
                     onValueChange =
-                        onShowHintsToggled, role = Role.Checkbox
+                        onShowHintsToggled,
+                    role = Role.Checkbox
                 )
                 .semantics { stateDescription = hintsEnabledState }
                 .padding(horizontal = 16.dp),

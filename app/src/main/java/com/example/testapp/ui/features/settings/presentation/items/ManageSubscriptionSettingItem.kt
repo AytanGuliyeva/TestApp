@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.presentation.items
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
+import com.example.testapp.ui.features.settings.presentation.components.SettingItem
 
 @Composable
 fun ManageSubscriptionSettingItem(
@@ -22,7 +23,8 @@ fun ManageSubscriptionSettingItem(
     SettingItem(modifier = modifier) {
         Row(
             modifier = Modifier
-                .clickable(onClickLabel = stringResource(id = R.string.cd_open_subscription)) { onSettingClicked() }
+                .clickable(onClickLabel =
+                    stringResource(id = R.string.cd_open_subscription)){ onSettingClicked() }
                 .padding(16.dp)) {
 
             Text(

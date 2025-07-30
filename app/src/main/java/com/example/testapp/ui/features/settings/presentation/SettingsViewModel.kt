@@ -1,6 +1,9 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.presentation
 
 import androidx.lifecycle.ViewModel
+import com.example.testapp.ui.features.settings.domain.model.MarketingOption
+import com.example.testapp.ui.features.settings.domain.model.Theme
+import com.example.testapp.ui.features.settings.presentation.state.SettingsState
 import kotlinx.coroutines.flow.MutableStateFlow
 
 class SettingsViewModel:ViewModel(){
@@ -13,11 +16,13 @@ class SettingsViewModel:ViewModel(){
     fun toggleHintSettings(checked: Boolean) {
         uiState.value = uiState.value.copy(hintsEnabled = !uiState.value.hintsEnabled)
     }
+
     fun setMarketingSettings(option: MarketingOption){
         uiState.value = uiState.value.copy(
             marketingOption = option
         )
     }
+
     fun setTheme(theme: Theme){
         uiState.value=uiState.value.copy(themeOption =  theme)
     }

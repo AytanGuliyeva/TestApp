@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings
+package com.example.testapp.ui.features.settings.domain.model
 
 import androidx.annotation.StringRes
 import com.example.testapp.R
