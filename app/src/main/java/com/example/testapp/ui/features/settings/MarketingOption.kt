@@ -1,5 +1,5 @@
 package com.example.testapp.ui.features.settings
 
 enum class MarketingOption(val id:Int) {
-    ALLOWED(0),NOR_ALLOWED(1)
+    ALLOWED(0),NOT_ALLOWED(1)
 }

@@ -6,11 +6,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 class SettingsViewModel:ViewModel(){
     val uiState = MutableStateFlow(SettingsState())
 
-    fun toggleNotificationSettings(){
+    fun toggleNotificationSettings(checked:Boolean){
      uiState.value = uiState.value.copy(notificationsEnabled = !uiState.value.notificationsEnabled)
     }
 
-    fun toggleHintSettings() {
+    fun toggleHintSettings(checked: Boolean) {
         uiState.value = uiState.value.copy(hintsEnabled = !uiState.value.hintsEnabled)
     }
     fun setMarketingSettings(option: MarketingOption){
