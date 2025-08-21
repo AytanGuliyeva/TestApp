@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings.presentation.items
+package com.example.testapp.ui.features.settings.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -16,8 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
-import com.example.testapp.ui.features.settings.domain.model.Theme
-import com.example.testapp.ui.features.settings.presentation.components.SettingItem
+import com.example.testapp.ui.features.settings.data.Theme
 
 @Composable
 fun ThemeSettingItem(

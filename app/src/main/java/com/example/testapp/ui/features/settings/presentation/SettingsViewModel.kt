@@ -1,8 +1,8 @@
 package com.example.testapp.ui.features.settings.presentation
 
 import androidx.lifecycle.ViewModel
-import com.example.testapp.ui.features.settings.domain.model.MarketingOption
-import com.example.testapp.ui.features.settings.domain.model.Theme
+import com.example.testapp.ui.features.settings.data.MarketingOption
+import com.example.testapp.ui.features.settings.data.Theme
 import com.example.testapp.ui.features.settings.presentation.state.SettingsState
 import kotlinx.coroutines.flow.MutableStateFlow
 

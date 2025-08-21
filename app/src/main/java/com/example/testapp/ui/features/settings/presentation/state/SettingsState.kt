@@ -1,7 +1,7 @@
 package com.example.testapp.ui.features.settings.presentation.state
 
-import com.example.testapp.ui.features.settings.domain.model.MarketingOption
-import com.example.testapp.ui.features.settings.domain.model.Theme
+import com.example.testapp.ui.features.settings.data.MarketingOption
+import com.example.testapp.ui.features.settings.data.Theme
 
 data class SettingsState(
     val notificationsEnabled:Boolean = false,

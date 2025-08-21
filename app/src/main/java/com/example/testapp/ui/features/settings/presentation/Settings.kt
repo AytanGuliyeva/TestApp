@@ -22,13 +22,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.testapp.R
-import com.example.testapp.ui.features.settings.presentation.items.AppVersionSettingItem
-import com.example.testapp.ui.features.settings.presentation.items.HintSettingsItem
-import com.example.testapp.ui.features.settings.presentation.items.ManageSubscriptionSettingItem
-import com.example.testapp.ui.features.settings.presentation.items.MarketingSettingItem
-import com.example.testapp.ui.features.settings.presentation.items.NotificationsSettings
+import com.example.testapp.ui.features.settings.presentation.components.AppVersionSettingItem
+import com.example.testapp.ui.features.settings.presentation.components.HintSettingsItem
+import com.example.testapp.ui.features.settings.presentation.components.ManageSubscriptionSettingItem
+import com.example.testapp.ui.features.settings.presentation.components.MarketingSettingItem
+import com.example.testapp.ui.features.settings.presentation.components.NotificationsSettings
 import com.example.testapp.ui.features.settings.presentation.components.SectionSpacer
-import com.example.testapp.ui.features.settings.presentation.items.ThemeSettingItem
+import com.example.testapp.ui.features.settings.presentation.components.ThemeSettingItem
 
 @Composable
 fun Settings() {
@@ -78,7 +78,6 @@ fun Settings() {
             )
             Divider()
         }
-
     }
 }
 
@@ -102,7 +101,6 @@ fun SettingsList(
             )
         }
     }
-
 }
 
 

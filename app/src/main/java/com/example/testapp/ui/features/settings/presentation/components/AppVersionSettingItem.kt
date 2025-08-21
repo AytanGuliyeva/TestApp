@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings.presentation.items
+package com.example.testapp.ui.features.settings.presentation.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -10,7 +10,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
-import com.example.testapp.ui.features.settings.presentation.components.SettingItem
 
 @Composable
 fun AppVersionSettingItem(

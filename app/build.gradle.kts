@@ -41,8 +41,9 @@ android {
 
 dependencies {
 
+
     //component
- //   implementation("androidx.activity:activitycompose:1.9.3")
+   // implementation("androidx.activity:activitycompose:1.9.3")
 
     //API
     implementation("androidx.compose.ui:ui:1.8.3")
@@ -51,8 +52,8 @@ dependencies {
     implementation("androidx.compose.material:material:1.8.3" )
 
     //viewmodel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-
+   implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+//   implementation("androidx.compose.material:material-icons-extended:1.8.3")
     //tools
 //    implementation( "androidx.compose.ui:uitooling-preview:1.7.6")
 //    debugImplementation("androidx.compose.ui:ui-tooling:1.8.3")
