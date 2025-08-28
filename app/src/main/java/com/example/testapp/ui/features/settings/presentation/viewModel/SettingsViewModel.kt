@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings.presentation
+package com.example.testapp.ui.features.settings.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.testapp.ui.features.settings.data.MarketingOption

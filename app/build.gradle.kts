@@ -41,18 +41,20 @@ android {
 
 dependencies {
 
+    //nav
+    implementation("androidx.navigation:navigation-compose:2.8.5")
 
     //component
-   // implementation("androidx.activity:activitycompose:1.9.3")
+    // implementation("androidx.activity:activitycompose:1.9.3")
 
     //API
     implementation("androidx.compose.ui:ui:1.8.3")
 
     //material design
-    implementation("androidx.compose.material:material:1.8.3" )
+    implementation("androidx.compose.material:material:1.8.3")
 
     //viewmodel
-   implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 //   implementation("androidx.compose.material:material-icons-extended:1.8.3")
     //tools
 //    implementation( "androidx.compose.ui:uitooling-preview:1.7.6")

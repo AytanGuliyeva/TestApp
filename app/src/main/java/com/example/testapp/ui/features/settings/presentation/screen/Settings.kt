@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.settings.presentation
+package com.example.testapp.ui.features.settings.presentation.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.testapp.R
+import com.example.testapp.ui.features.settings.presentation.viewModel.SettingsViewModel
 import com.example.testapp.ui.features.settings.presentation.components.AppVersionSettingItem
 import com.example.testapp.ui.features.settings.presentation.components.HintSettingsItem
 import com.example.testapp.ui.features.settings.presentation.components.ManageSubscriptionSettingItem

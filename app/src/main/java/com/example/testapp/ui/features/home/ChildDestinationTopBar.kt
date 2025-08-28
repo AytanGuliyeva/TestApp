@@ -1,0 +1,37 @@
+package com.example.testapp.ui.features.home
+
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.example.testapp.R
+
+@Composable
+fun ChildDestinationTopBar(
+    modifier: Modifier = Modifier,
+    onNavigateUp: () -> Unit,
+    title:String
+){
+    TopAppBar(
+        modifier = modifier,
+        title = {
+            Text(text = title)
+        },
+        navigationIcon = {
+            IconButton(onClick = {
+                onNavigateUp()
+            }) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = stringResource(id = R.string.cd_navigate_up)
+                )
+            }
+        }
+    )
+
+}
