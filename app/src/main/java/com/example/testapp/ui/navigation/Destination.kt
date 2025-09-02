@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -29,12 +29,12 @@ sealed class Destination(
         }
     }
 
-    object Home : Destination("home")
-    object Feed : Destination("feed", Icons.Default.List)
-    object Contacts : Destination("contacts", Icons.Default.Person)
-    object Calendar : Destination("gallery", Icons.Default.DateRange)
-    object Settings : Destination("settings", Icons.Default.Settings)
-    object Upgrade : Destination("upgrade", Icons.Default.Star)
-    object Creation : Destination("creation", isRootDestination = false)
-    object Add : Destination("add", Icons.Default.Add, isRootDestination = false)
+    data object Home : Destination("home")
+    data object Feed : Destination("feed", Icons.Default.List)
+    data object Contacts : Destination("contacts", Icons.Default.Person)
+    data object Calendar : Destination("gallery", Icons.Default.DateRange)
+    data object Settings : Destination("settings", Icons.Default.Settings)
+    data object Upgrade : Destination("upgrade", Icons.Default.Star)
+    data object Creation : Destination("creation", isRootDestination = false)
+    data object Add : Destination("add", Icons.Default.Add, isRootDestination = false)
 }

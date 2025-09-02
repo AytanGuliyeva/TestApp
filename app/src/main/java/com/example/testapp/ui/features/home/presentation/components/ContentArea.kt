@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.features.home.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.testapp.ui.navigation.Destination
 
 @Composable
 fun ContentArea(

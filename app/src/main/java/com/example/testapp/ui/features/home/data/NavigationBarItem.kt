@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.features.home.data
 
 import androidx.compose.runtime.Composable
 

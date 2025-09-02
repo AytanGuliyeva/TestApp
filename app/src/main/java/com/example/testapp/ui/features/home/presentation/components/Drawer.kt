@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.features.home.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding

@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.core
 
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.NavigationRail
@@ -10,6 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.example.testapp.R
+import com.example.testapp.ui.features.home.presentation.components.buildNavigationBarItems
+import com.example.testapp.ui.navigation.Destination
 
 @Composable
 fun RailNavigationBar(

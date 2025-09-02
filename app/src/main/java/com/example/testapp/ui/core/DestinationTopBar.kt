@@ -1,7 +1,8 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.core
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.testapp.ui.navigation.Destination
 
 @Composable
 fun DestinationTopBar(
@@ -19,7 +20,6 @@ fun DestinationTopBar(
             openDrawer = onOpenDrawer,
             showSnackbar = showSnackbar
         )
-
     }else{
         ChildDestinationTopBar(
             modifier = modifier,

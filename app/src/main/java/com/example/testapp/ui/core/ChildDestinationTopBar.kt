@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.core
 
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar

@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.core
 
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.example.testapp.R
+import com.example.testapp.ui.navigation.Destination
 
 @Composable
 fun RootDestinationTopBar(

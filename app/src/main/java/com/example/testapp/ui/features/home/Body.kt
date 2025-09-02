@@ -6,6 +6,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import com.example.testapp.ui.navigation.Destination
+import com.example.testapp.ui.navigation.Navigation
+import com.example.testapp.ui.core.RailNavigationBar
 
 @Composable
 fun Body(
@@ -16,7 +19,6 @@ fun Body(
     onCreateItem: () -> Unit,
     onNavigate: (destination: Destination) -> Unit
 ) {
-
     Row(modifier = modifier) {
         if (destination.isRootDestination && orientation == Configuration.ORIENTATION_LANDSCAPE) {
             RailNavigationBar(

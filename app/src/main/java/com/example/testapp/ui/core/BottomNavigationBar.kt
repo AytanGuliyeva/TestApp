@@ -1,11 +1,11 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.core
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.testapp.ui.features.home.presentation.components.buildNavigationBarItems
+import com.example.testapp.ui.navigation.Destination
 
 @Composable
 fun BottomNavigationBar(
@@ -14,17 +14,12 @@ fun BottomNavigationBar(
     onNavigate: (destination: Destination) -> Unit
 ) {
     BottomNavigation(modifier = modifier) {
-        /*    listOf(
-                Destination.Feed,
-                Destination.Contacts,
-                Destination.Calendar
-            )*/
         buildNavigationBarItems(currentDestination, onNavigate = onNavigate)
             .forEach {
                 BottomNavigationItem(
                     selected = it.selected,
                     onClick = it.onClick,
-                    icon = { it.icon() },
+                    icon = { it.icon()},
                     label = { it.label()}
                 )
             }

@@ -1,7 +1,9 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.features.home.presentation.components
 
 import androidx.compose.material.Text
 import androidx.compose.material3.Icon
+import com.example.testapp.ui.features.home.data.NavigationBarItem
+import com.example.testapp.ui.navigation.Destination
 import java.util.Locale
 
 fun buildNavigationBarItems(
@@ -26,7 +28,8 @@ fun buildNavigationBarItems(
                 Text(text =
                     it.path.replaceFirstChar { char ->
                         char.titlecase(Locale.getDefault())
-                    })
+                    }
+                )
             }
         )
     }

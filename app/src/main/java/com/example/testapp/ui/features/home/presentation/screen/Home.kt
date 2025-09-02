@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.home
+package com.example.testapp.ui.features.home.presentation.screen
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -6,17 +6,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.DrawerValue
 import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.rememberDrawerState
 import androidx.compose.material.rememberScaffoldState
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -30,6 +25,10 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.testapp.R
+import com.example.testapp.ui.features.home.Body
+import com.example.testapp.ui.core.BottomNavigationBar
+import com.example.testapp.ui.core.DestinationTopBar
+import com.example.testapp.ui.navigation.Destination
 import kotlinx.coroutines.launch
 
 @SuppressLint("CoroutineCreationDuringComposition")
@@ -74,40 +73,6 @@ fun Home(modifier: Modifier = Modifier) {
                 }
             )
         },
-                /*
-                        topBar = {
-                            val snackBarMessage = stringResource(id = R.string.not_available_yet)
-                            TopAppBar(
-                                title = { Text(text = Destination.Home.path) },
-                                navigationIcon = {
-                                    IconButton(onClick = {
-                                        coroutineScope.launch {
-                                            drawerState.open()
-                                        }
-                                    }) {
-                                        Icon(imageVector = Icons.Default.Menu,
-                                            contentDescription = stringResource(id = R.string.cd_open_menu)
-                                        )
-                                    }
-                                },
-                                actions = {
-                                    if (currentDestination != Destination.Feed) {
-                                        IconButton(onClick = {
-                                            coroutineScope.launch {
-                                                scaffoldState.snackbarHostState.showSnackbar(snackBarMessage)
-                                            }
-                                        }) {
-                                            Icon(
-                                                imageVector = Icons.Default.Info,
-                                                contentDescription = stringResource(id = R.string.cd_more_information)
-                                            )
-                                        }
-                                    }
-                                }
-
-                            )
-                        },
-                */
         floatingActionButton = {
             if (   orientation != Configuration.ORIENTATION_LANDSCAPE &&
                 currentDestination == Destination.Feed){
@@ -128,7 +93,6 @@ fun Home(modifier: Modifier = Modifier) {
                 BottomNavigationBar(
                     currentDestination = currentDestination,
                     onNavigate = {
-
                         navController.navigate(it.path) {
                             popUpTo(navController.graph.findStartDestination().id) {
                                 saveState = true
@@ -136,8 +100,8 @@ fun Home(modifier: Modifier = Modifier) {
                             launchSingleTop = true
                             restoreState = true
                         }
-                    })
-
+                    }
+                )
             }
         },
         drawerContent = {
@@ -170,10 +134,7 @@ fun Home(modifier: Modifier = Modifier) {
                     launchSingleTop = true
                     restoreState = true
                 }
-            })
-        Navigation(
-            modifier = modifier,
-            navController = navController
+            }
         )
     }
 }
