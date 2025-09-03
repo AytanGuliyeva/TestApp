@@ -1,6 +1,10 @@
-package com.example.testapp.ui.features.emailBox
+package com.example.testapp.ui.features.emailBox.viewModel
 
 import androidx.lifecycle.ViewModel
+import com.example.testapp.ui.features.emailBox.data.EmailFactory
+import com.example.testapp.ui.features.emailBox.state.InboxEvent
+import com.example.testapp.ui.features.emailBox.state.InboxState
+import com.example.testapp.ui.features.emailBox.data.InboxStatus
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 
@@ -21,7 +25,6 @@ class InboxViewModel : ViewModel() {
         when(contentEvent){
             is InboxEvent.RefreshContent -> loadContent()
             is InboxEvent.DeleteEmail -> deleteEmail(contentEvent.id)
-
         }
     }
 

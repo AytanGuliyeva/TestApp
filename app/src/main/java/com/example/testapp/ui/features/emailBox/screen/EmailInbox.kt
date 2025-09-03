@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.emailBox
+package com.example.testapp.ui.features.emailBox.screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
@@ -15,8 +15,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.testapp.R
+import com.example.testapp.ui.features.emailBox.components.EmailList
+import com.example.testapp.ui.features.emailBox.components.EmptyState
+import com.example.testapp.ui.features.emailBox.components.ErrorState
+import com.example.testapp.ui.features.emailBox.state.InboxEvent
+import com.example.testapp.ui.features.emailBox.state.InboxState
+import com.example.testapp.ui.features.emailBox.data.InboxStatus
+import com.example.testapp.ui.features.emailBox.Loading
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter", "UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -25,8 +31,6 @@ fun EmailInbox(
     inboxState: InboxState,
     inboxEventListener: (inboxEvent: InboxEvent) -> Unit
 ) {
-
-    val viewModel: InboxViewModel = viewModel()
     androidx.compose.material.Scaffold(
         modifier = modifier,
         topBar = {
@@ -40,21 +44,24 @@ fun EmailInbox(
                             .padding(top = 8.dp),
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center,
-                        text = stringResource(id =
-                            R.string.title_inbox, inboxState.content?.count() ?: "empty"
+                        text = stringResource(
+                            id =
+                                R.string.title_inbox, inboxState.content?.count() ?: "empty"
                         )
                     )
                 })
         }) {
-        Box( modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center){
-            if (inboxState.status ==  InboxStatus.LOADING){
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            if (inboxState.status == InboxStatus.LOADING) {
                 Loading()
-            } else if (inboxState.status ==  InboxStatus.ERROR){
+            } else if (inboxState.status == InboxStatus.ERROR) {
                 ErrorState {
                     inboxEventListener(InboxEvent.RefreshContent)
                 }
-            }else  if (inboxState.status ==  InboxStatus.SUCCESS){
+            } else if (inboxState.status == InboxStatus.SUCCESS) {
                 val emails = inboxState.content.orEmpty()
                 if (emails.isEmpty()) {
                     EmptyState { inboxEventListener(InboxEvent.RefreshContent) }
@@ -64,8 +71,7 @@ fun EmailInbox(
                         inboxEventListener = inboxEventListener
                     )
                 }
-            }
-            else{
+            } else {
                 EmptyState {
                     inboxEventListener(InboxEvent.RefreshContent)
                 }

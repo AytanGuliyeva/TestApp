@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.emailBox
+package com.example.testapp.ui.features.emailBox.components
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
@@ -22,6 +22,8 @@ import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.testapp.R
+import com.example.testapp.ui.features.emailBox.data.Email
+import com.example.testapp.ui.features.emailBox.state.InboxEvent
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

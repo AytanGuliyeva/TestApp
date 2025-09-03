@@ -1,4 +1,4 @@
-package com.example.testapp.ui.features.emailBox
+package com.example.testapp.ui.features.emailBox.data
 
 object EmailFactory {
     fun makeEmailList(): List<Email> {
